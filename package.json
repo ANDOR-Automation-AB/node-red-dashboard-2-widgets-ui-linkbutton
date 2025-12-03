@@ -1,0 +1,48 @@
+{
+  "name": "@andor-automation/node-red-dashboard-2-widgets-ui-linkbutton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build"    
+  },
+  "description": "",
+  "keywords": [
+    "node-red",
+    "dashboard",
+    "contrib",
+    "widget",
+    "link",
+    "button"
+  ],
+  "author": "Johan Krusing",
+  "license": "MIT",
+  "files": [
+    "nodes",
+    "resources",
+    "package.json"
+  ],
+  "dependencies": {
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.7",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-static-copy": "^3.1.2"
+  },
+  "node-red": {
+    "version": ">=3.0.0",
+    "nodes": {
+      "ui-linkbutton": "nodes/ui-linkbutton.js"
+    }
+  },
+  "node-red-dashboard-2": {
+    "version": "0.8.0",
+    "widgets": {
+      "ui-linkbutton": {
+        "output": "ui-linkbutton.umd.js",
+        "component": "UILinkbutton"
+      }
+    }
+  }
+}
