@@ -1,6 +1,13 @@
 <template>
+  <iframe 
+    v-if="props.embedded && props.url"
+    :src="props.url"
+    style="width: 100%; height: 100%; border: none;"
+  ></iframe>
   <v-btn
-    text="linkbutton"
+    v-else
+    @click="onClick"
+    :text="props.text"
   ></v-btn>
 </template>
 
@@ -29,6 +36,10 @@
       onLoad(msg, base) {
         this.msg = msg
         this.base = base
+      },
+      onClick() {
+        if (this.props.newTab) window.open(this.props.url, "_blank")
+        else window.location.href = this.props.url
       }
     }
   }
