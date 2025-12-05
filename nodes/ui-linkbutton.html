@@ -74,27 +74,4 @@
 
 <script type="text/markdown" data-help-name="ui-linkbutton">
 
-Link button with option to open in new tab or as embedded
-
-**Text**  
-Label shown on the button.
-
-**URL**  
-Target address.
-
-- Absolute e.g. `https://example.com/page`
-- Relative e.g. `/manuals/guide.pdf`
-
-When using a relative URL, the file is served from the directory configured as
-`httpStatic` in your Node-RED `settings.js`. Example: `httpStatic: '/var/local/'`.
-
-A relative URL like /manuals/guide.pdf will resolve to http://<dashboard-host>:<port>/manuals/guide.pdf  
-Files must exist under the configured static directory for the link or embedded view to load correctly.
-
-**New tab**  
-Opens the target in a new browser tab.
-
-**Embedded**  
-Replaces the button with an iframe that loads the target directly.
-
 </script>
