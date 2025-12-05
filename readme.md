@@ -35,7 +35,7 @@ Label shown on the button.
 Target address.
 
 - Absolute e.g. `https://example.com/page`
-- Relative
+- Relative e.g. `/manuals/guide.pdf`
 
 When using a relative URL, the file is served from the directory configured as
 `httpStatic` in your Node-RED `settings.js`. Example: `httpStatic: '/var/local/'`.

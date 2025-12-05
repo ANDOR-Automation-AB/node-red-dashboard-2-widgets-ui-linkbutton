@@ -23,7 +23,8 @@
     data() {
       return {
         base: null,
-        msg: null
+        msg: null,
+        url: null
       }
     },
     created() {
@@ -36,6 +37,13 @@
       onLoad(msg, base) {
         this.msg = msg
         this.base = base
+
+        if (/^[a-zA-Z]+:\/\//.test(this.props.url)) {
+          this.url = this.props.url
+        } else {
+          const port = window.location.port ? `:${window.location.port}` : ""
+          this.url = `${window.location.protocol}//${window.location.hostname}${port}/${this.props.url}`
+        }
       },
       onClick() {
         if (this.props.newTab) window.open(this.props.url, "_blank")
