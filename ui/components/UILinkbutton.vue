@@ -1,7 +1,8 @@
 <template>
   <iframe 
+    ref="frame"
     v-if="props.embedded && props.url"
-    :src="props.url"
+    :src="url"
     style="width: 100%; height: 100%; border: none;"
   ></iframe>
   <v-btn
@@ -33,6 +34,14 @@
     methods: {
       onInput(msg) {
         this.msg = msg
+        if (msg?.payload === true) {
+          if (this.props.embedded) {
+            const frame = this.$refs.frame
+            if (frame) frame.src = frame.src
+          } else {
+            this.onClick()
+          }
+        }
       },
       onLoad(msg, base) {
         this.msg = msg

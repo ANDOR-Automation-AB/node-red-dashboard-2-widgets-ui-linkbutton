@@ -14,9 +14,13 @@ This widget provides options to open an url target in a new tab by pressing a bu
 ### 1.0.0
 - Initial release.
 
+### 1.0.1
+- Input payload true will trigger button pressed event.
+- Input payload true will reload url when embedded.
+
 ## Install or Update
 
-Make sure you install this widget inside your `.node-red` directory.
+**Important.** Make sure you install this widget inside your `.node-red` directory.
 ```
 cd ~/.node-red
 ```
